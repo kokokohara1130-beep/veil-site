@@ -168,6 +168,10 @@ a {
   top: -96px;
 }
 
+.hero__logo-heading {
+  top: -141px;
+}
+
 .hero__line {
   display: block;
   width: 1px;
