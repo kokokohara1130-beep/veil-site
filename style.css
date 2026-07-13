@@ -156,6 +156,14 @@ a {
   font-size: 0.58rem;
 }
 
+.hero__logo-heading,
+.hero__statement,
+.hero__detail,
+.hero__scroll {
+  position: relative;
+  top: -96px;
+}
+
 .hero__line {
   display: block;
   width: 1px;
@@ -491,6 +499,13 @@ a {
   .eyebrow {
     top: 0;
     margin-bottom: 16px;
+  }
+
+  .hero__logo-heading,
+  .hero__statement,
+  .hero__detail,
+  .hero__scroll {
+    top: 0;
   }
 
   .hero__logo-heading {
