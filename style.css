@@ -81,12 +81,15 @@ a {
 
 .hero {
   display: flex;
+  width: 100%;
   min-height: 100svh;
-  padding-top: max(2rem, env(safe-area-inset-top));
-  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  max-width: none;
+  padding-top: max(3.5rem, env(safe-area-inset-top));
+  padding-bottom: max(3.5rem, env(safe-area-inset-bottom));
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #000;
   text-align: center;
 }
 
@@ -111,17 +114,20 @@ a {
   font-size: 0.63rem;
 }
 
-h1 {
+.hero__logo-heading {
+  width: min(86vw, 960px);
   margin: 0;
-  font-size: clamp(4.5rem, 25vw, 9.5rem);
-  font-weight: 300;
-  line-height: 0.86;
-  letter-spacing: 0.13em;
-  text-indent: 0.13em;
+  line-height: 0;
+}
+
+.hero__logo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero__statement {
-  margin: 2.3rem 0 0;
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.2rem, 5vw, 1.65rem);
   font-style: italic;
