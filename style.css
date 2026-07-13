@@ -109,6 +109,8 @@ a {
 }
 
 .eyebrow {
+  position: relative;
+  top: 70px;
   margin: 0 0 20px;
   color: var(--color-muted);
   font-size: 0.63rem;
@@ -487,6 +489,7 @@ a {
 
 @media (max-width: 44rem) {
   .eyebrow {
+    top: 0;
     margin-bottom: 16px;
   }
 
