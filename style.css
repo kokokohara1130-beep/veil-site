@@ -109,12 +109,9 @@ a {
 }
 
 .eyebrow {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 0.5rem;
+  margin: 0 0 20px;
   color: var(--color-muted);
   font-size: 0.63rem;
-  transform: translateY(min(calc(28.6vw - 1.5rem), 278px));
 }
 
 .hero__logo-heading {
@@ -490,7 +487,7 @@ a {
 
 @media (max-width: 44rem) {
   .eyebrow {
-    transform: translateY(calc(34.1vw - 1.5rem));
+    margin-bottom: 16px;
   }
 
   .hero__logo-heading {
