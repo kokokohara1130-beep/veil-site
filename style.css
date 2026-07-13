@@ -84,8 +84,8 @@ a {
   width: 100%;
   min-height: 100svh;
   max-width: none;
-  padding-top: max(3.5rem, env(safe-area-inset-top));
-  padding-bottom: max(3.5rem, env(safe-area-inset-bottom));
+  padding-top: max(1.5rem, env(safe-area-inset-top));
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -95,8 +95,8 @@ a {
 
 .hero__mark {
   width: 1px;
-  height: clamp(3.25rem, 10vh, 5.5rem);
-  margin-bottom: 2rem;
+  height: clamp(1.5rem, 4vh, 2.5rem);
+  margin-bottom: 1rem;
   background: linear-gradient(to bottom, transparent, var(--color-line-strong));
 }
 
@@ -109,13 +109,13 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 1.3rem;
+  margin: 0 0 0.5rem;
   color: var(--color-muted);
   font-size: 0.63rem;
 }
 
 .hero__logo-heading {
-  width: min(86vw, 960px);
+  width: min(72vw, 760px);
   margin: 0;
   line-height: 0;
 }
@@ -127,7 +127,9 @@ a {
 }
 
 .hero__statement {
-  margin: clamp(2rem, 5vw, 3rem) 0 0;
+  position: relative;
+  z-index: 1;
+  margin: clamp(-8.5rem, -20vw, -4rem) 0 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.2rem, 5vw, 1.65rem);
   font-style: italic;
@@ -144,7 +146,7 @@ a {
 
 .hero__scroll {
   display: flex;
-  margin-top: clamp(4.5rem, 12vh, 7rem);
+  margin-top: clamp(2.25rem, 5vh, 3.5rem);
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
@@ -480,6 +482,12 @@ a {
 
   .character-card {
     aspect-ratio: 1.25 / 1;
+  }
+}
+
+@media (max-width: 44rem) {
+  .hero__logo-heading {
+    width: 86vw;
   }
 }
 
