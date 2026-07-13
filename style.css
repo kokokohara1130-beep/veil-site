@@ -110,7 +110,8 @@ a {
 
 .eyebrow {
   position: relative;
-  top: 70px;
+  z-index: 2;
+  top: min(calc(28.6vw - 126px), 176px);
   margin: 0 0 20px;
   color: var(--color-muted);
   font-size: 0.63rem;
