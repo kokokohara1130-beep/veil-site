@@ -94,8 +94,11 @@ a {
 }
 
 .hero__mark {
+  position: relative;
+  z-index: 2;
+  top: min(calc(28.6vw - 156px), 146px);
   width: 1px;
-  height: clamp(1.5rem, 4vh, 2.5rem);
+  height: clamp(24px, 3vh, 36px);
   margin-bottom: 1rem;
   background: linear-gradient(to bottom, transparent, var(--color-line-strong));
 }
@@ -111,7 +114,7 @@ a {
 .eyebrow {
   position: relative;
   z-index: 2;
-  top: min(calc(28.6vw - 126px), 176px);
+  top: min(calc(28.6vw - 156px), 146px);
   margin: 0 0 20px;
   color: var(--color-muted);
   font-size: 0.63rem;
@@ -497,6 +500,11 @@ a {
 }
 
 @media (max-width: 44rem) {
+  .hero__mark {
+    top: 0;
+    height: clamp(1.5rem, 4vh, 2.5rem);
+  }
+
   .eyebrow {
     top: 0;
     margin-bottom: 16px;
