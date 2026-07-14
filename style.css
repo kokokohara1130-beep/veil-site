@@ -514,8 +514,12 @@ a {
 
 @media (min-width: 45rem) {
   .hero {
-    padding-top: 150px;
-    justify-content: flex-start;
+    padding-top: max(1.5rem, env(safe-area-inset-top));
+    justify-content: center;
+  }
+
+  .hero > * {
+    translate: 0 -20px;
   }
 
   .hero__mark {
@@ -564,6 +568,10 @@ a {
 @media (max-width: 44rem) {
   .hero {
     padding-top: calc(max(1.5rem, env(safe-area-inset-top)) + 18px + 24px);
+  }
+
+  .hero > * {
+    translate: 0 -8.76vh;
   }
 
   .hero__mark {
