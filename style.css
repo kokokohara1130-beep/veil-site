@@ -543,11 +543,11 @@ a {
 
 @media (max-width: 44rem) {
   .hero {
-    padding-top: calc(max(1.5rem, env(safe-area-inset-top)) + 42px);
+    padding-top: calc(max(1.5rem, env(safe-area-inset-top)) + 18px + 24px);
   }
 
   .hero__mark {
-    top: 86px;
+    top: calc(70px + 16px);
     height: clamp(1.5rem, 4vh, 2.5rem);
   }
 
@@ -576,7 +576,7 @@ a {
   }
 
   .hero__detail {
-    margin-top: 31.6px;
+    margin-top: calc(0.85rem + 18px);
   }
 
   .hero__scroll {
