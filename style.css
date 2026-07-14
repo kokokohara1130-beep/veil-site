@@ -162,7 +162,7 @@ a {
 }
 
 .hero__detail::after {
-  margin-top: 3px;
+  margin-top: 1px;
   color: #b0b2b7;
   content: "すべての音は、誰かを想っている。";
   font-size: clamp(0.47rem, 1.82vw, 0.55rem);
