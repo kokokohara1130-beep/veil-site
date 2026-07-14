@@ -542,8 +542,12 @@ a {
 }
 
 @media (max-width: 44rem) {
+  .hero {
+    padding-top: calc(max(1.5rem, env(safe-area-inset-top)) + 42px);
+  }
+
   .hero__mark {
-    top: 70px;
+    top: 86px;
     height: clamp(1.5rem, 4vh, 2.5rem);
   }
 
@@ -569,6 +573,14 @@ a {
     width: 82vw;
     height: auto;
     margin-inline: auto;
+  }
+
+  .hero__detail {
+    margin-top: 31.6px;
+  }
+
+  .hero__scroll {
+    margin-top: calc(clamp(2.25rem, 5vh, 3.5rem) + 24px);
   }
 }
 
