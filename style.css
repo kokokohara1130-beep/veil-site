@@ -493,6 +493,44 @@ a {
 }
 
 @media (min-width: 45rem) {
+  .hero {
+    padding-top: 150px;
+    justify-content: flex-start;
+  }
+
+  .hero__mark {
+    position: static;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .eyebrow {
+    position: static;
+    margin-bottom: 32px;
+  }
+
+  .hero__logo-heading {
+    position: static;
+    overflow: hidden;
+    height: min(32.21vw, 340px);
+  }
+
+  .hero__logo {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 66.6%;
+  }
+
+  .hero__statement {
+    position: static;
+    margin-top: 53px;
+  }
+
+  .hero__detail,
+  .hero__scroll {
+    position: static;
+  }
+
   .social-link {
     min-height: 7.4rem;
     padding-inline: 1.5rem;
