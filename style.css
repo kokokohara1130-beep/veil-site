@@ -422,7 +422,9 @@ a {
 }
 
 .character-card {
+  position: relative;
   display: flex;
+  overflow: hidden;
   min-width: 0;
   aspect-ratio: 1 / 1.04;
   padding: clamp(0.75rem, 3.7vw, 1.4rem);
@@ -431,11 +433,77 @@ a {
   border-right: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.018), transparent 62%);
-  transition: background-color 260ms ease;
+  isolation: isolate;
 }
 
-.character-card:hover {
-  background-color: rgba(255, 255, 255, 0.022);
+.character-card::before,
+.character-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.character-card::before {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-image: var(--character-image);
+  background-position: var(--character-position, center center);
+  background-size: cover;
+  filter: brightness(0.72);
+  transition:
+    filter 420ms var(--ease-out),
+    transform 420ms var(--ease-out);
+}
+
+.character-card::after {
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 28%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.character-card:nth-child(1) {
+  --character-image: url("assets/characters/aria.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(2) {
+  --character-image: url("assets/characters/nagisa.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(3) {
+  --character-image: url("assets/characters/yui.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(4) {
+  --character-image: url("assets/characters/rei.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(5) {
+  --character-image: url("assets/characters/saya.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(6) {
+  --character-image: url("assets/characters/renfa.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(7) {
+  --character-image: url("assets/characters/floria.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(8) {
+  --character-image: url("assets/characters/shion.webp");
+  --character-position: center center;
+}
+
+.character-card:nth-child(9) {
+  --character-image: url("assets/characters/haneul.webp");
+  --character-position: center center;
 }
 
 .character-card h3 {
@@ -452,6 +520,13 @@ a {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(0.66rem, 2.8vw, 0.83rem);
   font-style: italic;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .character-card:hover::before {
+    filter: brightness(0.88);
+    transform: scale(1.03);
+  }
 }
 
 .footer {
@@ -613,6 +688,10 @@ a {
 
   .hero__scroll {
     margin-top: calc(clamp(2.25rem, 5vh, 3.5rem) + 24px);
+  }
+
+  .character-card::before {
+    filter: brightness(0.8);
   }
 }
 
