@@ -650,6 +650,12 @@ a {
   .character-card:nth-child(n + 2)::before {
     background-position: center 35%;
   }
+
+  .character-card:nth-child(4)::before,
+  .character-card:nth-child(6)::before,
+  .character-card:nth-child(9)::before {
+    background-position: center 45%;
+  }
 }
 
 @media (max-width: 44rem) {
