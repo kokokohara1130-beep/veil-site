@@ -600,11 +600,11 @@ a {
   }
 
   .hero__detail {
-    margin-top: calc(0.85rem + 16px);
+    margin-top: calc(0.85rem - 14px);
   }
 
   .hero__statement {
-    margin-top: calc(clamp(-8.5rem, -20vw, -4rem) + 22px);
+    margin-top: calc(clamp(-8.5rem, -20vw, -4rem) + 52px);
   }
 
   .hero__scroll {
