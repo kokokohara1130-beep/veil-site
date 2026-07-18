@@ -209,6 +209,10 @@ a {
   padding-top: var(--space-section);
 }
 
+.film {
+  display: none;
+}
+
 .section-heading {
   display: flex;
   margin-bottom: 2rem;
