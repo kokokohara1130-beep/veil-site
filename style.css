@@ -646,6 +646,10 @@ a {
   .character-card::before {
     background-position: center 20%;
   }
+
+  .character-card:nth-child(n + 2)::before {
+    background-position: center 35%;
+  }
 }
 
 @media (max-width: 44rem) {
