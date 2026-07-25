@@ -472,36 +472,21 @@ a {
 }
 
 .character-card:nth-child(3) {
-  --character-image: url("assets/characters/yui.webp");
-  --character-position: center center;
-}
-
-.character-card:nth-child(4) {
   --character-image: url("assets/characters/rei.webp");
   --character-position: center center;
 }
 
-.character-card:nth-child(5) {
-  --character-image: url("assets/characters/saya.webp");
-  --character-position: center center;
-}
-
-.character-card:nth-child(6) {
-  --character-image: url("assets/characters/renfa.webp");
-  --character-position: center center;
-}
-
-.character-card:nth-child(7) {
+.character-card:nth-child(4) {
   --character-image: url("assets/characters/floria.webp");
   --character-position: center center;
 }
 
-.character-card:nth-child(8) {
+.character-card:nth-child(5) {
   --character-image: url("assets/characters/shion.webp");
   --character-position: center center;
 }
 
-.character-card:nth-child(9) {
+.character-card:nth-child(6) {
   --character-image: url("assets/characters/haneul.webp");
   --character-position: center center;
 }
@@ -651,9 +636,8 @@ a {
     background-position: center 35%;
   }
 
-  .character-card:nth-child(4)::before,
-  .character-card:nth-child(6)::before,
-  .character-card:nth-child(9)::before {
+  .character-card:nth-child(3)::before,
+  .character-card:nth-child(6)::before {
     background-position: center 45%;
   }
 }
