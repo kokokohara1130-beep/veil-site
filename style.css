@@ -213,6 +213,10 @@ a {
   display: none;
 }
 
+.characters {
+  display: none;
+}
+
 .section-heading {
   display: flex;
   margin-bottom: 2rem;
