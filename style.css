@@ -467,22 +467,22 @@ a {
 
 .character-card--aria {
   --character-image: url("assets/live-retouched/guitarist.png");
-  --character-position: center center;
+  --character-position: center 15%;
 }
 
 .character-card--nagisa {
   --character-image: url("assets/live-retouched/drummer.png");
-  --character-position: center center;
+  --character-position: center 25%;
 }
 
 .character-card--rei {
   --character-image: url("assets/live-retouched/bassist.png");
-  --character-position: center 20%;
+  --character-position: center 10%;
 }
 
 .character-card--yoru {
   --character-image: url("assets/live-retouched/vocalist.png");
-  --character-position: center center;
+  --character-position: center 25%;
 }
 
 .character-card h3 {
@@ -622,17 +622,6 @@ a {
     aspect-ratio: 1 / 1;
   }
 
-  .character-card::before {
-    background-position: center 20%;
-  }
-
-  .character-card:not(.character-card--aria)::before {
-    background-position: center 35%;
-  }
-
-  .character-card--rei::before {
-    background-position: center 20%;
-  }
 }
 
 @media (max-width: 44rem) {
