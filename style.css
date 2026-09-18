@@ -214,7 +214,7 @@ a {
 }
 
 .characters {
-  display: none;
+  display: block;
 }
 
 .section-heading {
@@ -420,7 +420,7 @@ a {
 
 .character-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--color-line);
   border-left: 1px solid var(--color-line);
 }
@@ -465,33 +465,23 @@ a {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 28%, rgba(0, 0, 0, 0.82) 100%);
 }
 
-.character-card:nth-child(1) {
-  --character-image: url("assets/characters/aria.webp");
+.character-card--aria {
+  --character-image: url("assets/live-retouched/guitarist.png");
   --character-position: center center;
 }
 
-.character-card:nth-child(2) {
-  --character-image: url("assets/characters/nagisa.webp");
+.character-card--nagisa {
+  --character-image: url("assets/live-retouched/drummer.png");
   --character-position: center center;
 }
 
-.character-card:nth-child(3) {
-  --character-image: url("assets/characters/rei.webp");
-  --character-position: center center;
+.character-card--rei {
+  --character-image: url("assets/live-retouched/bassist.png");
+  --character-position: center 20%;
 }
 
-.character-card:nth-child(4) {
-  --character-image: url("assets/characters/floria.webp");
-  --character-position: center center;
-}
-
-.character-card:nth-child(5) {
-  --character-image: url("assets/characters/shion.webp");
-  --character-position: center center;
-}
-
-.character-card:nth-child(6) {
-  --character-image: url("assets/characters/haneul.webp");
+.character-card--yoru {
+  --character-image: url("assets/live-retouched/vocalist.png");
   --character-position: center center;
 }
 
@@ -636,13 +626,12 @@ a {
     background-position: center 20%;
   }
 
-  .character-card:nth-child(n + 2)::before {
+  .character-card:not(.character-card--aria)::before {
     background-position: center 35%;
   }
 
-  .character-card:nth-child(3)::before,
-  .character-card:nth-child(6)::before {
-    background-position: center 45%;
+  .character-card--rei::before {
+    background-position: center 20%;
   }
 }
 
