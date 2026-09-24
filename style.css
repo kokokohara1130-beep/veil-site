@@ -79,6 +79,12 @@ a {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   font-weight: 700;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.site-nav.is-scrolled {
+  background: rgba(9, 10, 12, 0.96);
+  box-shadow: 0 1px 0 var(--color-line);
 }
 
 .site-nav__links {
@@ -99,7 +105,7 @@ a {
 .site-nav__links a {
   padding-inline: 0.25rem;
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
   transition: color 200ms ease;
 }
@@ -116,11 +122,12 @@ a {
 @media (max-width: 44rem) {
   .site-nav__links {
     justify-content: center;
-    gap: clamp(0.5rem, 3vw, 2rem);
+    gap: clamp(0.25rem, 2vw, 1rem);
   }
 
   .site-nav__links a {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -291,6 +298,27 @@ a {
   letter-spacing: 0.03em;
 }
 
+.about__wordmark {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 18rem;
+  aspect-ratio: 420 / 158;
+  justify-self: center;
+  mix-blend-mode: screen;
+}
+
+/* Display the supplied artwork, retaining its cracks and diagonal strokes. */
+.about__wordmark img {
+  position: absolute;
+  top: 0;
+  left: -73.809524%;
+  width: 250.47619%;
+  max-width: none;
+  height: auto;
+  filter: grayscale(1) contrast(4) invert(1);
+}
+
 .about__copy p {
   margin: 0;
 }
@@ -314,8 +342,8 @@ a {
 
 .section-heading h2 {
   margin: 0;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .social-list {
@@ -355,7 +383,7 @@ a {
 
 .social-link__note {
   color: var(--color-muted);
-  font-size: 0.71rem;
+  font-size: 0.8rem;
   letter-spacing: 0.035em;
 }
 
@@ -490,7 +518,10 @@ a {
 .film-card__action {
   flex: 0 0 auto;
   color: var(--color-muted);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   letter-spacing: 0.04em;
 }
 
@@ -534,7 +565,7 @@ a {
 .member-profile__description {
   margin: 0.8rem 0 0;
   color: #b0b2b7;
-  font-size: clamp(0.78rem, 2.8vw, 0.88rem);
+  font-size: clamp(0.875rem, 2.8vw, 0.95rem);
   line-height: 1.9;
   overflow-wrap: anywhere;
 }
@@ -777,6 +808,8 @@ a {
 /* The band photo replaces the old logo-and-copy hero on every screen size. */
 .hero.hero--band-photo {
   justify-content: flex-start;
+  min-height: 0;
+  padding-bottom: 0;
   padding-inline: 0;
   padding-top: 0;
 }
@@ -798,6 +831,7 @@ a {
   position: relative;
   width: 100%;
   isolation: isolate;
+  translate: none;
 }
 
 .hero__visual::after {
@@ -828,11 +862,13 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  min-width: 64px;
+  min-width: 144px;
   min-height: 44px;
-  padding: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   line-height: 1.2;
@@ -855,7 +891,7 @@ a {
   }
 }
 
-@media (max-width: 27rem) {
+@media (max-width: 44rem) {
   .about__layout {
     display: flex;
     flex-direction: column;
@@ -864,6 +900,18 @@ a {
 
   .about__logo {
     width: min(58vw, 14rem);
+  }
+
+  .about__copy {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding-top: 4.5rem;
+  }
+
+  .social-link {
+    min-height: 5.5rem;
   }
 
   .film-card__caption {

@@ -1,25 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#090a0c">
 
-    <title>VELM — Official Links</title>
+    <title>VELM — Official Site</title>
     <meta
       name="description"
       content="Enter the world of VELM. Official social links, the latest film, and four musicians united by one shared sound."
     >
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="VELM — Official Links">
+    <meta property="og:title" content="VELM — Official Site">
     <meta
       property="og:description"
       content="Find your voice in the noise."
     >
-    <!-- TODO: Replace with the final production URL before publishing. -->
-    <meta property="og:url" content="https://example.com/">
+    <meta property="og:url" content="https://veil-site.vercel.app/">
+    <meta property="og:image" content="https://veil-site.vercel.app/assets/velm-band-hero-wide-clean.png">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
+    <meta property="og:image:alt" content="VELMのメンバー4人の集合写真">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="VELM">
+    <link rel="canonical" href="https://veil-site.vercel.app/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -30,10 +36,10 @@
     <nav class="site-nav" aria-label="Main navigation">
       <ul class="site-nav__links">
         <li><a href="#top">TOP</a></li>
-        <li><a href="#about-title">ABOUT</a></li>
-        <li><a href="#links-title">SNS</a></li>
         <li><a href="#film-title">MV</a></li>
+        <li><a href="#about-title">ABOUT</a></li>
         <li><a href="#characters-title">MEMBERS</a></li>
+        <li><a href="#links-title">SNS</a></li>
       </ul>
     </nav>
 
@@ -41,10 +47,10 @@
       <div class="hero__visual">
       <h1 class="hero__logo-heading" id="site-title">
         <picture>
-          <source media="(max-width: 44rem)" srcset="assets/velm-band-portrait-cases.png" width="941" height="1672">
+          <source media="(max-width: 44rem)" srcset="assets/velm-band-portrait-cases.webp" width="941" height="1672">
         <img
           class="hero__logo"
-          src="assets/velm-band-hero-wide-clean.png"
+          src="assets/velm-band-hero-wide-clean.webp"
           width="1672"
           height="941"
           alt="VELM"
@@ -53,20 +59,48 @@
         >
         </picture>
       </h1>
-        <a class="hero__connect-link" href="#links-title" aria-label="Scroll to CONNECT">
-          <span>SCROLL</span>
+        <a class="hero__connect-link" href="#film-title" aria-label="FALSE SIGNALのMVを見る">
+          <span>WATCH MV</span>
           <span class="hero__connect-arrow" aria-hidden="true">↓</span>
         </a>
       </div>
     </header>
 
     <main id="main-content">
+      <section class="section film reveal" aria-labelledby="film-title">
+        <div class="section-heading">
+          <h2 id="film-title">MV</h2>
+        </div>
+
+        <div class="film-card">
+          <div class="film-card__player">
+          <iframe
+            class="film-card__embed"
+            width="1337"
+            height="752"
+            src="https://www.youtube.com/embed/4UPddblpv0E"
+            title="VELM - FALSE SIGNAL｜Official Music Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          </div>
+          <div class="film-card__caption">
+            <span class="film-card__title">VELM / FALSE SIGNAL</span>
+            <a class="film-card__action" href="https://www.youtube.com/watch?v=4UPddblpv0E" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section about reveal" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <h2 id="about-title">ABOUT</h2>
         </div>
         <div class="about__layout">
-          <img class="about__logo" src="assets/velm-logo-about.png" width="1254" height="1254" alt="VELM">
+          <div class="about__wordmark">
+            <img src="assets/velm-wordmark-reference.png" alt="VELM" loading="lazy" decoding="async">
+          </div>
           <div class="about__copy" lang="ja">
             <p>VELMは、言葉にならない感情や、胸の奥に残る違和感を音楽にする4人組ロックバンド。</p>
             <p>静けさの中にある危うさと、重厚で鋭いサウンド。<br>ヨル、アリア、レイ、ナギサ、それぞれの感情と個性が重なり、ひとつの音を生み出している。</p>
@@ -75,9 +109,45 @@
         </div>
       </section>
 
+      <section class="section characters reveal" aria-labelledby="characters-title">
+        <div class="section-heading">
+          <h2 id="characters-title">MEMBERS</h2>
+        </div>
+
+        <div class="character-grid">
+          <article class="member-profile">
+            <div class="character-card character-card--yoru"><h3>YORU</h3><p>Vocal / Lyrics</p></div>
+            <div class="member-profile__copy" lang="ja">
+              <p class="member-profile__name">ヨル <span>4月10日生まれ</span></p>
+              <p class="member-profile__description">人の気持ちの変化によく気づく、面倒見のいいボーカル。幼い頃からピアノや吹奏楽に親しみ、大学でアリアとナギサに出会ってロックの世界へ。繊細な感情を、歌と言葉で届ける。</p>
+            </div>
+          </article>
+          <article class="member-profile">
+            <div class="character-card character-card--aria"><h3>ARIA</h3><p>Guitar</p></div>
+            <div class="member-profile__copy" lang="ja">
+              <p class="member-profile__name">アリア <span>10月17日生まれ</span></p>
+              <p class="member-profile__description">人見知りで、普段は気まま。でも、好きな音にはとことんこだわる。音楽好きの父親の影響でロックに出会い、ギターを弾く楽しさに夢中になった。ナギサとは高校時代からの親友。</p>
+            </div>
+          </article>
+          <article class="member-profile">
+            <div class="character-card character-card--rei"><h3>REI</h3><p>Bass</p></div>
+            <div class="member-profile__copy" lang="ja">
+              <p class="member-profile__name">レイ <span>1月24日生まれ</span></p>
+              <p class="member-profile__description">落ち着いた雰囲気を持つ、メンバー最年長のベーシスト。重厚なロックを好み、低音の響きや音の厚みを大切にしている。力強い演奏で、VELMのサウンドを支える。</p>
+            </div>
+          </article>
+          <article class="member-profile">
+            <div class="character-card character-card--nagisa"><h3>NAGISA</h3><p>Drums</p></div>
+            <div class="member-profile__copy" lang="ja">
+              <p class="member-profile__name">ナギサ <span>8月8日生まれ</span></p>
+              <p class="member-profile__description">兄たちの影響で、スポーツも音楽も楽しんできたドラマー。バスケやダンスで身につけたリズム感が、パワフルな演奏につながっている。アリアとは高校時代からの親友で、ロックもダンスミュージックも好き。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section links reveal" id="links" aria-labelledby="links-title">
         <div class="section-heading">
-          <p class="section-heading__index" aria-hidden="true">01</p>
           <h2 id="links-title">SNS</h2>
         </div>
 
@@ -141,71 +211,6 @@
             </li>
           </ul>
         </nav>
-      </section>
-
-      <section class="section film reveal" aria-labelledby="film-title">
-        <div class="section-heading">
-          <p class="section-heading__index" aria-hidden="true">02</p>
-          <h2 id="film-title">LATEST FILM</h2>
-        </div>
-
-        <div class="film-card">
-          <div class="film-card__player">
-          <iframe
-            class="film-card__embed"
-            width="1337"
-            height="752"
-            src="https://www.youtube.com/embed/4UPddblpv0E"
-            title="VELM - FALSE SIGNAL｜Official Music Video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          </div>
-          <div class="film-card__caption">
-            <span class="film-card__title">VELM / FALSE SIGNAL</span>
-            <a class="film-card__action" href="https://www.youtube.com/watch?v=4UPddblpv0E" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section characters reveal" aria-labelledby="characters-title">
-        <div class="section-heading">
-          <p class="section-heading__index" aria-hidden="true">03</p>
-          <h2 id="characters-title">MEMBERS</h2>
-        </div>
-
-        <div class="character-grid">
-          <article class="member-profile">
-            <div class="character-card character-card--yoru"><h3>YORU</h3><p>Vocal / Lyrics</p></div>
-            <div class="member-profile__copy" lang="ja">
-              <p class="member-profile__name">ヨル <span>4月10日生まれ</span></p>
-              <p class="member-profile__description">人の気持ちの変化によく気づく、面倒見のいいボーカル。幼い頃からピアノや吹奏楽に親しみ、大学でアリアとナギサに出会ってロックの世界へ。繊細な感情を、歌と言葉で届ける。</p>
-            </div>
-          </article>
-          <article class="member-profile">
-            <div class="character-card character-card--aria"><h3>ARIA</h3><p>Guitar</p></div>
-            <div class="member-profile__copy" lang="ja">
-              <p class="member-profile__name">アリア <span>10月17日生まれ</span></p>
-              <p class="member-profile__description">人見知りで、普段は気まま。でも、好きな音にはとことんこだわる。音楽好きの父親の影響でロックに出会い、ギターを弾く楽しさに夢中になった。ナギサとは高校時代からの親友。</p>
-            </div>
-          </article>
-          <article class="member-profile">
-            <div class="character-card character-card--rei"><h3>REI</h3><p>Bass</p></div>
-            <div class="member-profile__copy" lang="ja">
-              <p class="member-profile__name">レイ <span>1月24日生まれ</span></p>
-              <p class="member-profile__description">落ち着いた雰囲気を持つ、メンバー最年長のベーシスト。重厚なロックを好み、低音の響きや音の厚みを大切にしている。力強い演奏で、VELMのサウンドを支える。</p>
-            </div>
-          </article>
-          <article class="member-profile">
-            <div class="character-card character-card--nagisa"><h3>NAGISA</h3><p>Drums</p></div>
-            <div class="member-profile__copy" lang="ja">
-              <p class="member-profile__name">ナギサ <span>8月8日生まれ</span></p>
-              <p class="member-profile__description">兄たちの影響で、スポーツも音楽も楽しんできたドラマー。バスケやダンスで身につけたリズム感が、パワフルな演奏につながっている。アリアとは高校時代からの親友で、ロックもダンスミュージックも好き。</p>
-            </div>
-          </article>
-        </div>
       </section>
     </main>
 
