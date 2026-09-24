@@ -848,12 +848,14 @@ a {
   transform: translateY(3px);
 }
 
-@media (max-width: 27rem) {
+@media (max-width: 44rem) {
   .hero.hero--band-photo {
     min-height: 0;
     padding-bottom: 0;
   }
+}
 
+@media (max-width: 27rem) {
   .about__layout {
     display: flex;
     flex-direction: column;
