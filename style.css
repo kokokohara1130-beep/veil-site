@@ -293,7 +293,7 @@ a {
   max-width: 42rem;
   color: var(--color-text);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.02rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.9rem);
   line-height: 1.95;
   letter-spacing: 0.03em;
 }
@@ -375,7 +375,7 @@ a {
 
 .social-link__note {
   color: var(--color-muted);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.035em;
 }
 
@@ -557,7 +557,7 @@ a {
 .member-profile__description {
   margin: 0.8rem 0 0;
   color: #b0b2b7;
-  font-size: clamp(0.875rem, 2.8vw, 0.95rem);
+  font-size: clamp(0.8125rem, 2.6vw, 0.875rem);
   line-height: 1.9;
   overflow-wrap: anywhere;
 }
@@ -594,7 +594,7 @@ a {
 
 .profile-dialog h2 { letter-spacing: 0.1em; }
 .profile-dialog__meta { color: var(--color-muted); }
-.profile-dialog__body { font-size: 1rem; line-height: 2; }
+.profile-dialog__body { font-size: 0.9rem; line-height: 2; }
 
 @media (max-width: 44rem) {
   .profiles-ready .member-profile__description { display: none; }
@@ -602,7 +602,7 @@ a {
     display: block;
     margin: 0.8rem 0;
     color: #b0b2b7;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 1.85;
   }
   .member-profile__copy { padding: 1rem 0.75rem; }
@@ -955,7 +955,7 @@ a {
   }
 
   .about__copy {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .section {
