@@ -299,24 +299,16 @@ a {
 }
 
 .about__wordmark {
-  position: relative;
-  overflow: hidden;
   width: 100%;
   max-width: 18rem;
-  aspect-ratio: 420 / 158;
   justify-self: center;
-  mix-blend-mode: screen;
 }
 
 /* Display the supplied artwork, retaining its cracks and diagonal strokes. */
 .about__wordmark img {
-  position: absolute;
-  top: 0;
-  left: -73.809524%;
-  width: 250.47619%;
-  max-width: none;
+  display: block;
+  width: 100%;
   height: auto;
-  filter: grayscale(1) contrast(4) invert(1);
 }
 
 .about__copy p {
@@ -568,6 +560,66 @@ a {
   font-size: clamp(0.875rem, 2.8vw, 0.95rem);
   line-height: 1.9;
   overflow-wrap: anywhere;
+}
+
+.member-profile__summary,
+.member-profile__more {
+  display: none;
+}
+
+.profile-dialog {
+  width: min(90vw, 30rem);
+  max-height: 85svh;
+  padding: 1.5rem;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.profile-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.profile-dialog__close {
+  display: block;
+  margin-left: auto;
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-dialog h2 { letter-spacing: 0.1em; }
+.profile-dialog__meta { color: var(--color-muted); }
+.profile-dialog__body { font-size: 1rem; line-height: 2; }
+
+@media (max-width: 44rem) {
+  .profiles-ready .member-profile__description { display: none; }
+  .profiles-ready .member-profile__summary {
+    display: block;
+    margin: 0.8rem 0;
+    color: #b0b2b7;
+    font-size: 0.875rem;
+    line-height: 1.85;
+  }
+  .member-profile__copy { padding: 1rem 0.75rem; }
+  .profiles-ready .member-profile__more {
+    display: block;
+    min-height: 44px;
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-text);
+    background: transparent;
+    font: inherit;
+    font-size: 0.75rem;
+    text-align: left;
+    cursor: pointer;
+  }
 }
 
 .character-card {
@@ -854,7 +906,7 @@ a {
 .hero__connect-link {
   position: absolute;
   z-index: 2;
-  bottom: clamp(0.75rem, 3vw, 3rem);
+  bottom: calc(clamp(0.75rem, 3vw, 3rem) + 1.5rem);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
