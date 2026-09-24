@@ -66,6 +66,64 @@ a {
   transform: translateY(0);
 }
 
+.site-nav {
+  position: fixed;
+  z-index: 10;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: calc(0.5rem + env(safe-area-inset-top)) var(--page-gutter) 0.5rem;
+  background: transparent;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-weight: 700;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 3vw, 2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-nav__links a {
+  padding-inline: 0.25rem;
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  transition: color 200ms ease;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+  color: var(--color-text);
+}
+
+.section-heading h2 {
+  scroll-margin-top: calc(5rem + env(safe-area-inset-top));
+}
+
+@media (max-width: 44rem) {
+  .site-nav__links {
+    justify-content: center;
+    gap: clamp(0.5rem, 3vw, 2rem);
+  }
+
+  .site-nav__links a {
+    font-size: 0.65rem;
+  }
+}
+
 :focus-visible {
   outline: 1px solid var(--color-text);
   outline-offset: 5px;
@@ -204,6 +262,41 @@ a {
 
 .characters {
   display: block;
+}
+
+.about__layout {
+  display: grid;
+  max-width: 58rem;
+  margin-inline: auto;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.about__logo {
+  display: block;
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+  justify-self: center;
+  mix-blend-mode: screen;
+}
+
+.about__copy {
+  max-width: 42rem;
+  color: var(--color-text);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.02rem);
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+}
+
+.about__copy p {
+  margin: 0;
+}
+
+.about__copy p + p {
+  margin-top: 1.4rem;
 }
 
 .section-heading {
@@ -414,6 +507,38 @@ a {
   border-left: 1px solid var(--color-line);
 }
 
+.member-profile {
+  min-width: 0;
+  border-right: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.member-profile__copy {
+  padding: clamp(0.85rem, 3vw, 1.4rem);
+}
+
+.member-profile__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.75rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.member-profile__name span {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+}
+
+.member-profile__description {
+  margin: 0.8rem 0 0;
+  color: #b0b2b7;
+  font-size: clamp(0.78rem, 2.8vw, 0.88rem);
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
 .character-card {
   position: relative;
   display: flex;
@@ -423,8 +548,6 @@ a {
   padding: clamp(0.75rem, 3.7vw, 1.4rem);
   flex-direction: column;
   justify-content: flex-end;
-  border-right: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.018), transparent 62%);
   isolation: isolate;
 }
@@ -514,18 +637,11 @@ a {
 
 .footer__logo {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  text-indent: 0.22em;
-}
-
-.footer__statement {
-  margin: 1rem 0 0;
-  color: var(--color-muted);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.85rem;
-  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-indent: 0.12em;
 }
 
 .footer__copyright {
@@ -658,7 +774,91 @@ a {
   }
 }
 
+/* The band photo replaces the old logo-and-copy hero on every screen size. */
+.hero.hero--band-photo {
+  justify-content: flex-start;
+  padding-inline: 0;
+  padding-top: 0;
+}
+
+.hero--band-photo .hero__logo-heading {
+  position: static;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.hero--band-photo .hero__logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero__visual {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+}
+
+.hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.25) 18%,
+    transparent 35%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 80%,
+    #000 100%
+  );
+}
+
+.hero__connect-link {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(0.75rem, 3vw, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+}
+
+.hero__connect-arrow {
+  font-size: 1.5rem;
+  transition: transform 200ms ease;
+}
+
+.hero__connect-link:hover .hero__connect-arrow,
+.hero__connect-link:focus-visible .hero__connect-arrow {
+  transform: translateY(3px);
+}
+
 @media (max-width: 27rem) {
+  .about__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about__logo {
+    width: min(58vw, 14rem);
+  }
+
   .film-card__caption {
     flex-direction: column;
     gap: 0.45rem;
